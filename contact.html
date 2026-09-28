@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오시는 길 · 예약 | 감동사진관 광명</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div data-header></div>
+
+<section class="page-hero plain">
+  <div class="container hero-text" style="text-align:center">
+    <span class="eyebrow">CONTACT · LOCATION</span>
+    <h1 style="font-size:clamp(32px,5vw,50px)">예약 · 오시는 길</h1>
+    <p style="color:var(--ink-soft);margin-top:12px">편하신 방법으로 연락 주세요. 빠르게 답변드리겠습니다.</p>
+  </div>
+</section>
+
+<!-- 예약 방법 -->
+<section class="section" id="reserve" style="padding-top:56px">
+  <div class="container">
+    <div class="contact-ways">
+      <div class="way reveal">
+        <div class="ico">📞</div><h3>전화 예약</h3>
+        <p>가장 빠른 방법이에요.<br><span data-info="phone"></span></p>
+        <a class="btn btn-primary" data-link="phone" href="#">전화 걸기</a>
+      </div>
+      <div class="way reveal">
+        <div class="ico">💬</div><h3>카카오톡 상담</h3>
+        <p>사진이나 의상 사진을 보내며<br>편하게 상담하세요.</p>
+        <a class="btn btn-kakao" data-link="kakao" href="#">카카오톡 채널</a>
+      </div>
+      <div class="way reveal">
+        <div class="ico">🗓️</div><h3>네이버 예약</h3>
+        <p>비어 있는 날짜를 보고<br>바로 예약할 수 있어요.</p>
+        <a class="btn btn-outline" data-link="naverBooking" href="#">네이버 예약</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 예약 문의서 -->
+<section class="section soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">RESERVATION</span>
+      <h2>예약 문의 남기기</h2>
+      <p>아래 내용을 적고 버튼을 누르면 문자 메시지로 바로 전달됩니다.</p>
+    </div>
+    <form class="form reveal" id="reserveForm">
+      <div class="row">
+        <div><label for="f-name">이름</label><input id="f-name" name="name" required placeholder="홍길동"></div>
+        <div><label for="f-phone">연락처</label><input id="f-phone" name="phone" type="tel" required placeholder="010-0000-0000"></div>
+      </div>
+      <div class="row">
+        <div><label for="f-type">촬영 종류</label>
+          <select id="f-type" name="type">
+            <option>가족사진</option>
+            <option>증명·여권사진</option>
+            <option>프로필사진</option>
+            <option>기타 문의</option>
+          </select>
+        </div>
+        <div><label for="f-people">인원</label><input id="f-people" name="people" placeholder="예: 어른 6명, 아이 3명"></div>
+      </div>
+      <div class="row">
+        <div><label for="f-date">희망 날짜</label><input id="f-date" name="date" type="date"></div>
+        <div><label for="f-time">희망 시간</label>
+          <select id="f-time" name="time">
+            <option value="">상관없음</option>
+            <option>오전 (10~12시)</option>
+            <option>오후 (12~16시)</option>
+            <option>늦은 오후 (16시 이후)</option>
+          </select>
+        </div>
+      </div>
+      <label for="f-memo">요청사항</label>
+      <textarea id="f-memo" name="memo" placeholder="예: 부모님 칠순 기념이에요. 20×24 액자를 원해요."></textarea>
+      <button class="btn btn-primary" type="submit">문자로 예약 문의 보내기</button>
+      <p class="hint">휴대폰에서 누르면 문자 앱이 열리고 작성하신 내용이 자동으로 입력됩니다.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 오시는 길 -->
+<section class="section" id="location">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">LOCATION</span>
+      <h2>오시는 길</h2>
+    </div>
+    <div class="location">
+      <div class="map"><iframe data-map title="감동사진관 위치 지도" loading="lazy"></iframe></div>
+      <div>
+        <ul class="info-list">
+          <li><b>주소</b><span data-info="address"></span></li>
+          <li><b>찾아오기</b><span data-info="addressHint"></span></li>
+          <li><b>영업시간</b><span data-info="hours"></span></li>
+          <li><b>휴무</b><span data-info="closed"></span></li>
+          <li><b>주차</b><span data-info="parking"></span></li>
+          <li><b>전화</b><a data-link="phone" href="#"><span data-info="phone"></span></a></li>
+        </ul>
+        <div class="map-links">
+          <a data-maplink="naver" href="#">네이버 지도</a>
+          <a data-maplink="kakao" href="#">카카오맵</a>
+          <a data-maplink="google" href="#">구글 지도</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-footer></div>
+<script src="js/site.js"></script>
+</body>
+</html>
